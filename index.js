@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const colors = require("colors");
 const fs = require("fs");
-const { Circle, Square, Triangle } = ('./shapes.js');
+const { Circle, Square, Triangle } = require('./lib/shapes.js');
 
 // Questions for user input
 const questions = [
@@ -62,35 +62,37 @@ function init() {
 
     inquirer
         .prompt(questions)
-        .then(() => {
-            userTextColor = questions.textcolor
-            userShapeColor = questions.shapecolor
-            userShapeType = questions.shape
-
+        .then((data) => {
+            console.log(data)
+            userTextColor = data.textcolor
+            userShapeColor = data.shapecolor
+            userShapeType = data.shape
+            console.log(userTextColor, userShapeColor, userShapeType)
             let userShape;
             if (userShapeType === "Triangle") {
                 userShape = new Triangle();
             }
             if (userShapeType === "Circle") {
-                userShapeType = new Circle();
+                userShape = new Circle();
             }
             if (userShapeType === "Square") {
-                userShapeType = new Square();
+                userShape = new Square();
             }
-            userShape.setColor(userShapeType);
-            createSvgElement();
+            // userShapeColor.setColor(questions.shapecolor);
+            userShape.setColor(userShapeColor)
 
-            writeToFile(svgFile, svgData)
+            const svgData = userShape.render()
+            console.log(svgData)
+
+            // writeToFile(svgFile, svgData)
         });
-
-    function createSvgElement() {
-        let svg = new Svg();
-        svg.setTextElement(text, textcolor);
-        svg.setShapeElement(shape);
-        svgString = svg.render();
-        return createSvgElement();
-    }
 }
+
+// const svg = new Svg();
+// svg.setTextElement(questions.text, questions.textcolor);
+// svg.setShapeElement(questions.shape);
+// svgString = svg.render();
+// return createSvgElement();
 
 // Call the initialization function
 init();
