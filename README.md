@@ -26,13 +26,21 @@ To test the application using `jest` type `npm run test` to run it. The applicat
 
 These are examples of logos created with this application.
 
+### Circle
+
 ![Circle](images/demo-logo-svg.png)
+
+### Square
 
 ![Square](images/demo-logo-dog.png)
 
+### Triangle
+
 ![Triangle](images/demo-logo-cat.png)
 
-![_Brat_ Album Style 😏](images/demo-logo-bat.png)
+### Charli XCX's _Brat_ Album Style 😏
+
+![_Brat_ Album Style](images/demo-logo-bat.png)
 
 ### Video Demonstrating Application In Use
 
