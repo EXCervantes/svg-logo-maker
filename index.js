@@ -68,7 +68,6 @@ function init() {
             userTextColor = data.textcolor
             userShapeColor = data.shapecolor
             userShapeType = data.shape
-            console.log(userTextColor, userShapeColor, userShapeType)
             let userShape;
             if (userShapeType === "Triangle") {
                 userShape = new Triangle();
