@@ -8,11 +8,11 @@ const { Circle, Square, Triangle } = require('./lib/shapes.js');
 const questions = [
     {
         type: "input",
-        message: "Enter your TEXT to be shown in the shape:",
+        message: "Enter your TEXT to be shown in the shape (3 letters or less):",
         name: "text",
         validate: function (answer) {
             if (answer.length > 0 && answer.length < 4) return true;
-            return console.log("Please enter less than 5 characters and more than 1 letter for the TEXT.");
+            return console.log("Please enter less than 3 characters and more than 1 letter for the TEXT.");
         }
     },
     {
@@ -56,14 +56,15 @@ function writeToFile(fileName, data) {
 
 // Initialize app questions and create the shape file
 function init() {
-    let svgData = "";
+    // let svgData = "";
     let svgFile = "logo.svg";
 
 
     inquirer
         .prompt(questions)
         .then((data) => {
-            console.log(data)
+            // Used to log collected user data for reference
+            // console.log(data)
             userText = data.text
             userTextColor = data.textcolor
             userShapeColor = data.shapecolor
@@ -82,7 +83,8 @@ function init() {
             userShape.setText(userText, userTextColor)
 
             const svgData = userShape.render()
-            console.log(svgData)
+            // Used to log render properties for reference
+            // console.log(svgData)
 
             writeToFile(svgFile, svgData)
         });
