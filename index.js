@@ -11,8 +11,8 @@ const questions = [
         message: "Enter your TEXT to be shown in the shape:",
         name: "text",
         validate: function (answer) {
-            if (answer.length > 0 && answer.length < 5) return true;
-            return console.log("Please enter less than 5 characters for the TEXT.");
+            if (answer.length > 0 && answer.length < 4) return true;
+            return console.log("Please enter less than 5 characters and more than 1 letter for the TEXT.");
         }
     },
     {
@@ -50,7 +50,7 @@ function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
         err
             ? console.log(colors.bgBrightRed(err))
-            : console.log(colors.bgBrightGreen("Success! Shape and text written to file."))
+            : console.log(colors.bgBrightGreen("Generated logo.svg"))
     );
 }
 
@@ -64,6 +64,7 @@ function init() {
         .prompt(questions)
         .then((data) => {
             console.log(data)
+            userText = data.text
             userTextColor = data.textcolor
             userShapeColor = data.shapecolor
             userShapeType = data.shape
@@ -78,13 +79,13 @@ function init() {
             if (userShapeType === "Square") {
                 userShape = new Square();
             }
-            // userShapeColor.setColor(questions.shapecolor);
             userShape.setColor(userShapeColor)
+            userShape.setText(userText, userTextColor)
 
             const svgData = userShape.render()
             console.log(svgData)
 
-            // writeToFile(svgFile, svgData)
+            writeToFile(svgFile, svgData)
         });
 }
 
