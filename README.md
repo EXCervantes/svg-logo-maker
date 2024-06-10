@@ -2,9 +2,11 @@
 
 ## Description
 
-This is an application for generating a logo in the format of a SVG. It uses prompts with questions for a user. This utilizes the packages "Inquirer" for posing questions and collection of user data, "File System (FS)" to write the file to the system, "Colors" to display the file created message, and "Jest" for testing the application. In addition, uses those packages with the Node language manager to generate the SVG file using the collected data from the questions posed to the user.
+This is an application for generating a logo in the format of a SVG. It uses prompts with questions for a user. This utilizes the packages "Inquirer" for posing questions and collection of user data, "File System (FS)" to write the file to the system, "Colors" to display the file created message, and "Jest" for testing the application. In addition, uses those packages with the Node language manager to generate the SVG file using the collected user data.
 
-This application has a testing suite which can be invoked via the terminal. The test will test the three shape classes a user can choose with defined parameter for each shape respectively. Speaking of the shapes each shape class has its own file to keep the structure more organized. This allows for more shapes to be implemented in further updates more easily by adding to each related file such as an "oval" into `circle.js` file or a "rectangle" into the `square.js` file.
+This application has a testing suite which can be invoked via the terminal. The test will check if the three shape classes a user can choose with defined parameters for each shape respectively.
+
+Each shape class has its own file to keep the structure more organized. This allows for more shapes to be implemented in further updates more easily by adding to each related file such as an "oval" into `circle.js` file or a "rectangle" into the `square.js` file.
   
 ## Installation
 
@@ -22,17 +24,23 @@ Once the data is entered, the application will generate a SVG file using the cod
 
 To test the application using `jest` type `npm run test` to run it. The application should pass each test for Triangle, Circle, and Square.
 
-There is an example of a file created with this application that can be found [here](/logo.svg).
+These are examples of logos created with this application.
+
+![Circle](images/demo-logo-svg.png)
+
+![Square](images/demo-logo-dog.png)
+
+![Triangle](images/demo-logo-cat.png)
 
 ### Video Demonstrating Application In Use
 
-Here is a [link]() TODO: to a video demonstrating how this application works.
+Here is a [link](https://drive.google.com/file/d/1ilPEruKmzC0mjkMcWL2lcw457T4rn2yt/view?usp=drive_link) to a video demonstrating how this application works.
 
 ### Screenshots of the Application
 
-![Screenshot 1](assets/images/SVGLogoMakerscreenshot1.jpg)
-![Screenshot 2](assets/images/SVGLogoMakerscreenshot2.jpg)
-![Screenshot 3](assets/images/SVGLogoMakerscreenshot3.jpg)
+![Screenshot 1](images/SVGLogoMakerscreenshot1.jpg)
+![Screenshot 2](images/SVGLogoMakerscreenshot2.jpg)
+![Screenshot 3](images/SVGLogoMakerscreenshot3.jpg)
 
 ## Credits
 
