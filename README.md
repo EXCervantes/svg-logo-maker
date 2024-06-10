@@ -2,9 +2,9 @@
 
 ## Description
 
-This is an application for generating a logo in the format of a SVG. It uses prompts with questions for a user. This utilizes the packages "Inquirer", "File System (FS)", and "Colors". In addition, uses those packages with the Node language manager to generate the SVG file using the collected data from the questions posed to the user.
+This is an application for generating a logo in the format of a SVG. It uses prompts with questions for a user. This utilizes the packages "Inquirer" for posing questions and collection of user data, "File System (FS)" to write the file to the system, "Colors" to display the file created message, and "Jest" for testing the application. In addition, uses those packages with the Node language manager to generate the SVG file using the collected data from the questions posed to the user.
 
-TODO: Describe testing
+This application has a testing suite which can be invoked via the terminal. The test will test the three shape classes a user can choose with defined parameter for each shape respectively. Speaking of the shapes each shape class has its own file to keep the structure more organized. This allows for more shapes to be implemented in further updates more easily by adding to each related file such as an "oval" into `circle.js` file or a "rectangle" into the `square.js` file.
   
 ## Installation
 
@@ -12,21 +12,21 @@ First to use this application head to the [SVG Logo Maker](https://github.com/EX
 
 You must have `node` installed on your system. Go [here](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for instructions on how to do so.
 
-Then in the Terminal run `npm install` to install both the `inquirer@8.2.4` and `colors` packages. For help on these click [here](https://www.npmjs.com/package/inquirer/v/8.2.4) for `inquirer` or [here](https://www.npmjs.com/package/colors) for `colors`. Finally to initialize this application run `node index.js` in the Terminal.
-
-TODO: Installing Jest
+Then in the Terminal run `npm install` to install the `inquirer@8.2.4`, `colors`, and `jest` packages. For help on these click [here](https://www.npmjs.com/package/inquirer/v/8.2.4) for `inquirer` or [here](https://www.npmjs.com/package/colors) for `colors` or [here](https://www.npmjs.com/package/jest) for `jest`. Finally to initialize this application run `node index.js` in the Terminal.
   
 ## Usage
   
 To run the application open the Terminal or GitBash in VSCode and run `node index.js`. The application will ask a series of questions about the project using the `inquirer` package.
 
-Once the data is entered, the application will generate a SVG file using the code from the files respective to the user's chosen shape along with the parent class code file. It will write the file via `fs.writeFile` titled `logo.svg`. The `logo.svg` file will have the chosen shape, text, text color, and shape color. There is an example of a file created with this application that can be found [here](/logo.svg).
+Once the data is entered, the application will generate a SVG file using the code from the files respective to the user's chosen shape along with the parent class code file. It will write the file via `fs.writeFile` titled `logo.svg`. The `logo.svg` file will have the chosen shape, text, text color, and shape color. 
 
-TODO: Testing
+To test the application using `jest` type `npm run test` to run it. The application should pass each test for Triangle, Circle, and Square.
+
+There is an example of a file created with this application that can be found [here](/logo.svg).
 
 ### Video Demonstrating Application In Use
 
-Here is a [link](TODO) to a video demonstrating how this application works.
+Here is a [link]() TODO: to a video demonstrating how this application works.
 
 ### Screenshots of the Application
 

@@ -45,7 +45,7 @@ const questions = [
     },
 ];
 
-// Write question data to file
+// Write questions data to file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
         err
@@ -54,7 +54,7 @@ function writeToFile(fileName, data) {
     );
 }
 
-// Initialize app and create the shape file
+// Initialize app questions and create the shape file
 function init() {
     let svgData = "";
     let svgFile = "logo.svg";
@@ -88,12 +88,6 @@ function init() {
             writeToFile(svgFile, svgData)
         });
 }
-
-// const svg = new Svg();
-// svg.setTextElement(questions.text, questions.textcolor);
-// svg.setShapeElement(questions.shape);
-// svgString = svg.render();
-// return createSvgElement();
 
 // Call the initialization function
 init();
