@@ -1,0 +1,4 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+	<rect x="50" height="200" width="200" fill="#8ace00"/>
+	<text x="150" y="125" font-size="60" font-family="Arial Narrow" text-anchor="middle" fill="#070a03">bat</text>
+</svg>

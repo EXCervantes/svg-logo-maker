@@ -32,6 +32,8 @@ These are examples of logos created with this application.
 
 ![Triangle](images/demo-logo-cat.png)
 
+![_Brat_ Album Style 😏](images/demo-logo-bat.png)
+
 ### Video Demonstrating Application In Use
 
 Here is a [link](https://drive.google.com/file/d/1ilPEruKmzC0mjkMcWL2lcw457T4rn2yt/view?usp=drive_link) to a video demonstrating how this application works.
